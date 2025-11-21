@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutzerklärung | asset.it.lg-n.de</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --card: #ffffff;
+      --accent: #00a65a;
+      --accent-soft: #44b16d;
+      --text: #1f2d3d;
+      --muted: #5f7087;
+      --line: #e4e7ec;
+    }
+    :root[data-theme="dark"] {
+      --bg: #0f1724;
+      --surface: #111a2b;
+      --card: #131f33;
+      --accent: #24c97f;
+      --accent-soft: #44d18f;
+      --text: #e6edf7;
+      --muted: #91a4bc;
+      --line: #1f2a3c;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", "Segoe UI", sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+      padding: 0 1.25rem 3rem;
+    }
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 1.25rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .brand img {
+      width: 62px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 6px;
+    }
+    .brand h1 {
+      margin: 0;
+    }
+    .header-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      background: rgba(0, 166, 90, 0.08);
+      border: 1px solid rgba(0, 166, 90, 0.18);
+      color: var(--accent);
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+    .eyebrow span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      box-shadow: 0 0 0 6px rgba(0, 166, 90, 0.12);
+    }
+    .theme-toggle {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .theme-toggle:hover {
+      border-color: rgba(0, 166, 90, 0.35);
+      color: var(--accent);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin: 0.85rem 0 0.4rem;
+      letter-spacing: -0.01em;
+    }
+    .lede {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .meta {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      background: #eef3f8;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    [data-theme="dark"] .badge {
+      background: #1d2a3c;
+      color: var(--text);
+      border-color: var(--line);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    nav.toc {
+      margin: 1.5rem 0 2rem;
+      padding: 1.1rem 1.25rem;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+    [data-theme="dark"] nav.toc {
+      background: var(--card);
+    }
+    nav.toc strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+    nav.toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.35rem 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    nav.toc a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0.4rem;
+      border-radius: 6px;
+      transition: color 160ms ease, background 160ms ease;
+      display: inline-block;
+      width: 100%;
+    }
+    nav.toc a:hover {
+      color: var(--accent);
+      background: rgba(0, 166, 90, 0.08);
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem 1.1rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+    }
+    section + section {
+      margin-top: 1rem;
+    }
+    h2 {
+      font-weight: 700;
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.01em;
+      font-size: 1.22rem;
+    }
+    h3 {
+      margin: 1.1rem 0 0.35rem;
+      font-size: 1.05rem;
+    }
+    p {
+      margin: 0.35rem 0;
+      color: var(--muted);
+    }
+    ul {
+      padding-left: 1.2rem;
+      color: var(--muted);
+      margin: 0.35rem 0 0.5rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.9rem;
+      margin-top: 0.75rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 1rem 1rem;
+      border: 1px solid var(--line);
+      min-height: 100%;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: var(--text);
+    }
+    .callout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      background: linear-gradient(135deg, rgba(0, 166, 90, 0.08), rgba(255, 255, 255, 1));
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      margin-top: 0.75rem;
+    }
+    .callout div {
+      color: var(--muted);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(0, 166, 90, 0.12);
+      color: var(--accent);
+      font-size: 0.9rem;
+      border: 1px solid rgba(0, 166, 90, 0.2);
+    }
+    footer {
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+      padding: 1.25rem 1.25rem 0;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 0 1rem 2.5rem;
+      }
+      section {
+        padding: 1.2rem 1rem;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="LGN.svg" alt="Lessing-Gymnasium Norderstedt Logo">
+      <div class="header-actions">
+        <div class="eyebrow"><span aria-hidden="true"></span>Gilt für asset.it.lg-n.de</div>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Darstellung umschalten">Dark Mode</button>
+      </div>
+    </div>
+    <h1>Datenschutzerklärung</h1>
+    <p class="lede">
+      Diese Datenschutzerklärung beschreibt die Verarbeitung personenbezogener Daten im Asset-Portal <strong>asset.it.lg-n.de</strong>, das als Snipe-IT Instanz für die Verwaltung von Geräten und Zubehör betrieben wird.
+    </p>
+    <div class="meta">
+      <div class="badge" title="Stand 22.11.2025">Stand: 22.11.2025</div>
+      <div class="badge">Verarbeitung nach DSGVO</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <strong>Schnellsprung</strong>
+      <ul>
+        <li><a href="#verantwortliche-stelle">Verantwortliche Stelle &amp; Kontakt</a></li>
+        <li><a href="#zwecke-daten">Zwecke &amp; Datenkategorien</a></li>
+        <li><a href="#rechte">Ihre Datenschutzrechte</a></li>
+        <li><a href="#sicherheit">Technische Sicherheit</a></li>
+        <li><a href="#serverlogs">Server-Log-Dateien</a></li>
+        <li><a href="#accounts">Nutzungskonten &amp; Asset-Historie</a></li>
+        <li><a href="#emails">System-E-Mails</a></li>
+        <li><a href="#cookies">Cookies &amp; Sitzungen</a></li>
+        <li><a href="#hosting">Hosting &amp; Backups</a></li>
+        <li><a href="#externe-dienste">Externe Dienste &amp; Links</a></li>
+      </ul>
+    </nav>
+
+    <section id="verantwortliche-stelle">
+      <h2>Benennung der verantwortlichen Stelle</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Lessing-Gymnasium Norderstedt</h3>
+          <p>Moorbekstraße 15<br>22846 Norderstedt</p>
+          <p>Schulleiterin: Marika Peters</p>
+        </div>
+        <div class="card">
+          <h3>Entscheidungskompetenz</h3>
+          <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, Kontaktdaten o. Ä.).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="zwecke-daten">
+      <h2>Zwecke &amp; Datenkategorien im Snipe-IT Portal</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Asset- und Inventarverwaltung</h3>
+          <p>Verwaltung von Geräten, Zubehör und Lizenzen, inklusive Inventarnummer, Modell, Standort, Status, Kauf- und Garantieinformationen sowie Anlage- und Änderungszeitpunkten.</p>
+        </div>
+        <div class="card">
+          <h3>Zuordnung zu Personen</h3>
+          <p>Zu Nutzungs- oder Ausleihzwecken wird die Verbindung zwischen Asset und Nutzerkonto gespeichert (Name, E-Mail, Zugehörigkeit), inkl. Historie von Aus- und Rückgaben.</p>
+        </div>
+        <div class="card">
+          <h3>Uploads &amp; Anhänge</h3>
+          <p>Optional können Dateien oder Bilder zum Asset hinterlegt werden (z.&nbsp;B. Rechnungen, Fotos). Es werden keine sensiblen Daten hochgeladen, die für die Verwaltung nicht erforderlich sind.</p>
+        </div>
+        <div class="card">
+          <h3>Rechtsgrundlagen</h3>
+          <p>Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Schulbetrieb: Bereitstellung und Verwaltung von Arbeits- und Lernmitteln) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an IT-Sicherheit, Nachvollziehbarkeit und Asset-Schutz).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rechte">
+      <h2>Ihre Datenschutzrechte</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Widerruf von Einwilligungen</h3>
+          <p>Einige Verarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine erteilte Einwilligung jederzeit per formloser Mitteilung (z.&nbsp;B. E‑Mail) widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.</p>
+        </div>
+        <div class="card">
+          <h3>Beschwerderecht</h3>
+          <p>Im Falle eines Datenschutzverstoßes können Sie sich bei der zuständigen Aufsichtsbehörde beschweren. Zuständig ist der Landesdatenschutzbeauftragte des Bundeslandes des Schulsitzes. Liste und Kontaktdaten: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank" rel="noopener">bfdi.bund.de</a>.</p>
+        </div>
+        <div class="card">
+          <h3>Datenübertragbarkeit</h3>
+          <p>Daten, die wir auf Grundlage Ihrer Einwilligung oder zur Erfüllung eines Vertrags automatisiert verarbeiten, können Sie in einem maschinenlesbaren Format an sich oder Dritte aushändigen lassen. Eine direkte Übertragung an einen anderen Verantwortlichen erfolgt, soweit technisch machbar.</p>
+        </div>
+        <div class="card">
+          <h3>Auskunft, Berichtigung, Sperrung, Löschung</h3>
+          <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über gespeicherte personenbezogene Daten, deren Herkunft, Empfänger und den Zweck der Verarbeitung. Ggf. besteht ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Wenden Sie sich hierzu über die im Impressum genannten Kontaktdaten an uns.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sicherheit">
+      <h2>Technische Sicherheit</h2>
+      <div class="callout">
+        <div>
+          <div class="pill">SSL-/TLS-Verschlüsselung</div>
+          <p>Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte nutzt unsere Website eine SSL- bzw. TLS-Verschlüsselung. Sie erkennen dies an der Adresszeile „https://” und am Schloss-Symbol des Browsers. Übermittelte Daten können so nicht von Dritten mitgelesen werden.</p>
+        </div>
+        <div>
+          <div class="pill">Portal-Kontext</div>
+          <p>Die Verschlüsselung gilt für alle Bereiche des Portals asset.it.lg-n.de, insbesondere Login- und Kommunikationswege im Asset-Management.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="serverlogs">
+      <h2>Server-Log-Dateien</h2>
+      <p>Die Schul-IT der Stadt Norderstedt erhebt und speichert als Provieder unserer Website automatisch Informationen, die Ihr Browser übermittelt:</p>
+      <ul>
+        <li>Besuchte Seite auf unserer Domain</li>
+        <li>Datum und Uhrzeit der Serveranfrage</li>
+        <li>Browsertyp und Browserversion</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Referrer URL</li>
+        <li>Hostname des zugreifenden Rechners</li>
+        <li>IP-Adresse</li>
+      </ul>
+      <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen erfolgt nicht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Verarbeitung zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen).</p>
+    </section>
+
+    <section id="accounts">
+      <h2>Nutzungskonten &amp; Asset-Historie</h2>
+      <p>Für den Zugang wird ein Nutzerkonto angelegt (Name, E-Mail, ggf. Rollen/Zugriffsstufen). Die Anmeldung erfolgt passwortbasiert oder über von der Netzwerk-AG vorgegebene Anmeldedaten. Diese können bei der Netzwerk-AG angefordert werden.</p>
+      <p>Das System speichert die Historie von Asset-Buchungen und -Rückgaben sowie Änderungen an Datensätzen (Audit-Log) zur Nachvollziehbarkeit und Sicherung der Inventarführung.</p>
+      <p>Daten werden gelöscht, sobald sie für die Zwecke der Asset-Dokumentation nicht mehr erforderlich sind oder gesetzliche Aufbewahrungsfristen abgelaufen sind. Nutzerkonten werden deaktiviert oder gelöscht, sobald kein Zugang mehr benötigt wird.</p>
+    </section>
+
+    <section id="emails">
+      <h2>System-E-Mails</h2>
+      <p>Snipe-IT kann systembedingte E-Mails versenden (z.&nbsp;B. Passwort-Zurücksetzung, Zuweisungsbestätigungen, Erinnerungen). Dafür wird die im Nutzerkonto hinterlegte E-Mail-Adresse verwendet.</p>
+      <p>Der Versand erfolgt über den vom Träger betriebenen Mailserver; es werden keine externen Newsletter- oder Tracking-Dienste eingesetzt.</p>
+    </section>
+
+    <section id="cookies">
+      <h2>Cookies &amp; Sitzungen</h2>
+      <p>Das Portal nutzt technisch notwendige Cookies, z.&nbsp;B. das Snipe-IT Sitzungs-Cookie <code>snipeit_session</code> sowie ein CSRF-Token (<code>XSRF-TOKEN</code>), um Anfragen zu validieren und den Login zu ermöglichen.</p>
+      <p>Diese Cookies sind essenziell für die Nutzung des Systems, dienen ausschließlich der Sitzungsverwaltung und werden nach dem Logout oder Session-Timeout ungültig. Analytik- oder Tracking-Cookies werden nicht eingesetzt.</p>
+    </section>
+
+    <section id="hosting">
+      <h2>Hosting, Backups &amp; Aufbewahrung</h2>
+      <p>Die Snipe-IT Instanz wird durch die Schul-IT der Stadt Norderstedt auf eigener Infrastruktur betrieben. Zugriff auf personenbezogene Daten haben ausschließlich berechtigte Administratoren.</p>
+      <p>Regelmäßige Backups der Anwendung und Datenbank werden erstellt, um die Betriebssicherheit zu gewährleisten. Backups werden nach definierten Fristen überschrieben bzw. gelöscht und sind nur für Administratoren zugänglich.</p>
+      <p>Daten werden gelöscht, sobald sie für die Zwecke der Asset-Verwaltung nicht mehr benötigt werden bzw. nach Ablauf etwaiger gesetzlicher Aufbewahrungsfristen.</p>
+    </section>
+
+    <section id="externe-dienste">
+      <h2>Externe Dienste &amp; Links</h2>
+      <p>Im Snipe-IT Portal werden keine externen Tracking- oder Marketing-Dienste eingesetzt. Externe Links können auf andere Angebote (z.&nbsp;B. Herstellerdokumentation) führen; wir haben keinen Einfluss darauf, dass diese Anbieter die Datenschutzbestimmungen einhalten.</p>
+    </section>
+
+    <section id="quelle">
+      <h2>Quelle</h2>
+      <p style="margin-bottom: 0;"><small>Teile dieser Datenschutzerklärung basieren auf dem Datenschutz-Konfigurator von <a href="http://www.mein-datenschutzbeauftragter.de" target="_blank" rel="noopener">mein-datenschutzbeauftragter.de</a>.</small></p>
+    </section>
+  </div>
+
+  <footer>
+    Asset-Portal des Lessing-Gymnasiums Norderstedt · Kontakt siehe Impressum. Bei Fragen zum Datenschutz wenden Sie sich bitte an die oben genannte verantwortliche Stelle.
+  </footer>
+
+  <script>
+    (function() {
+      const root = document.documentElement;
+      const btn = document.getElementById('theme-toggle');
+      const stored = localStorage.getItem('theme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored) {
+        root.dataset.theme = stored;
+      } else if (systemDark) {
+        root.dataset.theme = 'dark';
+      }
+      const updateLabel = () => {
+        const isDark = root.dataset.theme === 'dark';
+        btn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        btn.setAttribute('aria-pressed', String(isDark));
+      };
+      updateLabel();
+      btn.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        localStorage.setItem('theme', next);
+        updateLabel();
+      });
+    })();
+  </script>
+</body>
+</html>
