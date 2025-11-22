@@ -6,7 +6,6 @@
   <title>Datenschutzerklärung | asset.it.lg-n.de</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="x-icon" href="LGN.svg">
   <style>
     :root {
       --bg: #f4f6f9;
@@ -244,11 +243,12 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 0.75rem;
-      background: linear-gradient(135deg, rgba(0, 166, 90, 0.08), rgba(255, 255, 255, 1));
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 10px;
       padding: 1rem 1.1rem;
       margin-top: 0.75rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     }
     .callout div {
       color: var(--muted);
@@ -263,6 +263,15 @@
       color: var(--accent);
       font-size: 0.9rem;
       border: 1px solid rgba(0, 166, 90, 0.2);
+    }
+    [data-theme="dark"] .callout {
+      background: #162238;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
+      border-color: var(--line);
+    }
+    [data-theme="dark"] .pill {
+      background: rgba(36, 201, 127, 0.16);
+      border-color: rgba(36, 201, 127, 0.32);
     }
     footer {
       max-width: 1100px;
